@@ -19,13 +19,13 @@
 {!! Form::open(array('route' => config('quickadmin.route').'.categories.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 
 <div class="form-group">
-    {!! Form::label('cat_name', 'Name', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('cat_name', 'Name*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('cat_name', old('cat_name'), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('cat_slug', 'Slug', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('cat_slug', 'Slug*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('cat_slug', old('cat_slug'), array('class'=>'form-control')) !!}
         

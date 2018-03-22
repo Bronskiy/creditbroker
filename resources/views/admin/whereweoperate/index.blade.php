@@ -17,16 +17,16 @@
                             {!! Form::checkbox('delete_all',1,false,['class' => 'mass']) !!}
                         </th>
                         <th>Top Image</th>
-<th>Map Item 1</th>
-<th>Map Item 2</th>
-<th>Map Item 3</th>
-<th>Map Item 4</th>
-<th>Map Item 5</th>
-<th>Map Item 6</th>
-<th>Map Item 7</th>
-<th>Map Item 8</th>
-<th>Map Item 9</th>
-<th>Map Item 10</th>
+<th>Map Image 1</th>
+<th>Map Image 2</th>
+<th>State Image 1</th>
+<th>State Image 2</th>
+<th>State Image 3</th>
+<th>State Image 4</th>
+<th>State Image 5</th>
+<th>State Image 6</th>
+<th>State Image 7</th>
+<th>State Image 8</th>
 <th>SEO</th>
 
                         <th>&nbsp;</th>
@@ -39,17 +39,17 @@
                             <td>
                                 {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                             </td>
-                            <td>{{ isset($row->mainimage->) ? $row->mainimage-> : '' }}</td>
-<td>@if($row->map_item_1 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_1 }}">@endif</td>
-<td>@if($row->map_item_2 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_2 }}">@endif</td>
-<td>@if($row->map_item_3 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_3 }}">@endif</td>
-<td>@if($row->map_item_4 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_4 }}">@endif</td>
-<td>@if($row->map_item_5 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_5 }}">@endif</td>
-<td>@if($row->map_item_6 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_6 }}">@endif</td>
-<td>@if($row->map_item_7 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_7 }}">@endif</td>
-<td>@if($row->map_item_8 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_8 }}">@endif</td>
-<td>@if($row->map_item_9 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_9 }}">@endif</td>
-<td>@if($row->map_item_10 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_item_10 }}">@endif</td>
+                            <td>{{ isset($row->mainimage->link_title) ? $row->mainimage->link_title : '' }}</td>
+<td>@if($row->map_image_1 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_image_1 }}">@endif</td>
+<td>@if($row->map_image_2 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->map_image_2 }}">@endif</td>
+<td>@if($row->state_image_1 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->state_image_1 }}">@endif</td>
+<td>@if($row->state_image_2 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->state_image_2 }}">@endif</td>
+<td>@if($row->state_image_3 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->state_image_3 }}">@endif</td>
+<td>@if($row->state_image_4 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->state_image_4 }}">@endif</td>
+<td>@if($row->state_image_5 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->state_image_5 }}">@endif</td>
+<td>@if($row->state_image_6 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->state_image_6 }}">@endif</td>
+<td>@if($row->state_image_7 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->state_image_7 }}">@endif</td>
+<td>@if($row->state_image_8 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->state_image_8 }}">@endif</td>
 <td>{{ isset($row->seo->meta_title) ? $row->seo->meta_title : '' }}</td>
 
                             <td>

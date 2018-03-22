@@ -28,13 +28,13 @@
     <link rel="stylesheet"
           href="{{ url('quickadmin/css') }}/quickadmin-theme-default.css"/>
     <link rel="stylesheet"
-          href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+          href="{{ url('quickadmin/jquery-ui-1.11.4') }}/jquery-ui.css">
     <link rel="stylesheet"
-          href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css"/>
+          href="{{ url('quickadmin/DataTables-1.10.16') }}/css/jquery.dataTables.min.css"/>
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.css"/>
+          href="{{ url('quickadmin/css') }}/jquery-ui-timepicker-addon.min.css"/>
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.standalone.min.css"/>
+          href="{{ url('quickadmin/css') }}/bootstrap-datepicker.standalone.min.css"/>
 </head>
 
 <body class="page-header-fixed">

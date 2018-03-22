@@ -24,7 +24,7 @@ class GetInTouch extends Model {
     protected $fillable = [
           'mainimage_id',
           'top_text',
-          'contact_map',
+          'map',
           'contacts',
           'form_title',
           'bottom_text',

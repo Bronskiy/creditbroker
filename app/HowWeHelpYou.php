@@ -20,10 +20,11 @@ class HowWeHelpYou extends Model {
     protected $dates = ['deleted_at'];
 
     protected $table    = 'howwehelpyou';
-
+    
     protected $fillable = [
           'mainimage_id',
           'top_text',
+          'main_text',
           'side_image_desktop',
           'item_image_1',
           'item_text_1',
@@ -35,9 +36,10 @@ class HowWeHelpYou extends Model {
           'item_text_4',
           'item_image_5',
           'item_text_5',
-          'bottom_section'
+          'bottom_section',
+          'seo_id'
     ];
-
+    
 
     public static function boot()
     {
@@ -45,14 +47,20 @@ class HowWeHelpYou extends Model {
 
         HowWeHelpYou::observe(new UserActionsObserver);
     }
-
+    
     public function mainimage()
     {
         return $this->hasOne('App\MainImage', 'id', 'mainimage_id');
     }
 
 
+    public function seo()
+    {
+        return $this->hasOne('App\SEO', 'id', 'seo_id');
+    }
 
 
-
+    
+    
+    
 }

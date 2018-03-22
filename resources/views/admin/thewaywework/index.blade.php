@@ -29,7 +29,7 @@
                             <td>
                                 {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                             </td>
-                            <td>{{ isset($row->mainimage->) ? $row->mainimage-> : '' }}</td>
+                            <td>{{ isset($row->mainimage->link_title) ? $row->mainimage->link_title : '' }}</td>
 <td>{{ isset($row->seo->meta_title) ? $row->seo->meta_title : '' }}</td>
 
                             <td>

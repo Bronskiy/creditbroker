@@ -21,26 +21,32 @@
 <div class="form-group">
     {!! Form::label('post_title', 'Title*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('post_title', old('post_title'), array('class'=>'form-control')) !!}
-        
+        {!! Form::text('post_title', old('post_title'), array('class'=>'form-control', 'id'=>'title')) !!}
+
     </div>
 </div><div class="form-group">
     {!! Form::label('post_slug', 'Slug*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('post_slug', old('post_slug'), array('class'=>'form-control')) !!}
-        
+        {!! Form::text('post_slug', old('post_slug'), array('class'=>'form-control', 'id'=>'slug')) !!}
+
     </div>
 </div><div class="form-group">
     {!! Form::label('categories_id', 'Category', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::select('categories_id', $categories, old('categories_id'), array('class'=>'form-control')) !!}
-        
+
+    </div>
+</div><div class="form-group">
+    {!! Form::label('post_date', 'Date', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('post_date', old('post_date'), array('class'=>'form-control datepicker')) !!}
+
     </div>
 </div><div class="form-group">
     {!! Form::label('post_text', 'Text', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('post_text', old('post_text'), array('class'=>'form-control')) !!}
-        
+        {!! Form::textarea('post_text', old('post_text'), array('class'=>'form-control ckeditor')) !!}
+
     </div>
 </div>
 

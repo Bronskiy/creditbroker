@@ -37,7 +37,7 @@ class WhereWeOperateController extends Controller {
 	 */
 	public function create()
 	{
-	    $mainimage = MainImage::pluck("", "id")->prepend('Please select', 0);
+	    $mainimage = MainImage::pluck("link_title", "id")->prepend('Please select', 0);
 $seo = SEO::pluck("meta_title", "id")->prepend('Please select', 0);
 
 	    
@@ -66,7 +66,7 @@ $seo = SEO::pluck("meta_title", "id")->prepend('Please select', 0);
 	public function edit($id)
 	{
 		$whereweoperate = WhereWeOperate::find($id);
-	    $mainimage = MainImage::pluck("", "id")->prepend('Please select', 0);
+	    $mainimage = MainImage::pluck("link_title", "id")->prepend('Please select', 0);
 $seo = SEO::pluck("meta_title", "id")->prepend('Please select', 0);
 
 	    

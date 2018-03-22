@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Providers;
-
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use App\MainMenu;
+use App\Variables;
+use App\Page404;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +16,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+      View::share('menuData', MainMenu::all());
+      View::share('commonVariables', Variables::all());
+      View::share('Page404Data', Page404::all());
     }
 
     /**

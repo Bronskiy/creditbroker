@@ -39,13 +39,13 @@
 </div><div class="form-group">
     {!! Form::label('main_text', 'Main Text', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('main_text', old('main_text'), array('class'=>'form-control')) !!}
+        {!! Form::textarea('main_text', old('main_text'), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('bottom_section', 'Bottom Section', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('bottom_text', 'Bottom Text', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('bottom_section', old('bottom_section'), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::textarea('bottom_text', old('bottom_text'), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">

@@ -20,7 +20,7 @@ class HomePage extends Model {
     protected $dates = ['deleted_at'];
 
     protected $table    = 'homepage';
-    
+
     protected $fillable = [
           'mainimage_id',
           'top_text',
@@ -28,9 +28,10 @@ class HomePage extends Model {
           'first_column',
           'second_column',
           'third_column',
-          'bottom_section'
+          'bottom_section',
+          'seo_id'
     ];
-    
+
 
     public static function boot()
     {
@@ -38,14 +39,18 @@ class HomePage extends Model {
 
         HomePage::observe(new UserActionsObserver);
     }
-    
+
     public function mainimage()
     {
         return $this->hasOne('App\MainImage', 'id', 'mainimage_id');
     }
 
+    public function seo()
+    {
+        return $this->hasOne('App\SEO', 'id', 'seo_id');
+    }
 
-    
-    
-    
+
+
+
 }

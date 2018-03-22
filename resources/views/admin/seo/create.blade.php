@@ -19,7 +19,7 @@
 {!! Form::open(array('route' => config('quickadmin.route').'.seo.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 
 <div class="form-group">
-    {!! Form::label('meta_title', 'Menu Title', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('meta_title', 'Meta Title', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('meta_title', old('meta_title'), array('class'=>'form-control')) !!}
         

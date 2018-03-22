@@ -25,7 +25,7 @@ class CreatePostsRequest extends FormRequest {
 	{
 		return [
             'post_title' => 'required', 
-            'post_slug' => 'required|unique:posts,post_slug,'.$this->posts, 
+            'post_slug' => 'required', 
             
 		];
 	}

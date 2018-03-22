@@ -24,6 +24,9 @@ class CreateMainMenuRequest extends FormRequest {
 	public function rules()
 	{
 		return [
+            'menu_title' => 'required', 
+            'menu_link' => 'required', 
+            'menu_order' => 'required', 
             
 		];
 	}

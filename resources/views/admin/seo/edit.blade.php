@@ -19,7 +19,7 @@
 {!! Form::model($seo, array('class' => 'form-horizontal', 'id' => 'form-with-validation', 'method' => 'PATCH', 'route' => array(config('quickadmin.route').'.seo.update', $seo->id))) !!}
 
 <div class="form-group">
-    {!! Form::label('meta_title', 'Menu Title', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('meta_title', 'Meta Title', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('meta_title', old('meta_title',$seo->meta_title), array('class'=>'form-control')) !!}
         

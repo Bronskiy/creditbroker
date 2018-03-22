@@ -11,6 +11,7 @@ use App\Http\Requests\UpdateHowWeHelpYouRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\FileUploadTrait;
 use App\MainImage;
+use App\SEO;
 
 
 class HowWeHelpYouController extends Controller {
@@ -24,7 +25,7 @@ class HowWeHelpYouController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $howwehelpyou = HowWeHelpYou::with("mainimage")->get();
+        $howwehelpyou = HowWeHelpYou::with("mainimage")->with("seo")->get();
 
 		return view('admin.howwehelpyou.index', compact('howwehelpyou'));
 	}
@@ -36,10 +37,11 @@ class HowWeHelpYouController extends Controller {
 	 */
 	public function create()
 	{
-	    $mainimage = MainImage::pluck("main_text", "id")->prepend('Please select', 0);
+	    $mainimage = MainImage::pluck("link_title", "id")->prepend('Please select', 0);
+$seo = SEO::pluck("meta_title", "id")->prepend('Please select', 0);
 
 	    
-	    return view('admin.howwehelpyou.create', compact("mainimage"));
+	    return view('admin.howwehelpyou.create', compact("mainimage", "seo"));
 	}
 
 	/**
@@ -64,10 +66,11 @@ class HowWeHelpYouController extends Controller {
 	public function edit($id)
 	{
 		$howwehelpyou = HowWeHelpYou::find($id);
-	    $mainimage = MainImage::pluck("main_text", "id")->prepend('Please select', 0);
+	    $mainimage = MainImage::pluck("link_title", "id")->prepend('Please select', 0);
+$seo = SEO::pluck("meta_title", "id")->prepend('Please select', 0);
 
 	    
-		return view('admin.howwehelpyou.edit', compact('howwehelpyou', "mainimage"));
+		return view('admin.howwehelpyou.edit', compact('howwehelpyou', "mainimage", "seo"));
 	}
 
 	/**

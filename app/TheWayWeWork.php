@@ -26,7 +26,7 @@ class TheWayWeWork extends Model {
           'top_text',
           'main_title',
           'main_text',
-          'bottom_section',
+          'bottom_text',
           'seo_id'
     ];
     

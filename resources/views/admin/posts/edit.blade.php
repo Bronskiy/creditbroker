@@ -37,9 +37,15 @@
         
     </div>
 </div><div class="form-group">
+    {!! Form::label('post_date', 'Date', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('post_date', old('post_date',$posts->post_date), array('class'=>'form-control datepicker')) !!}
+        
+    </div>
+</div><div class="form-group">
     {!! Form::label('post_text', 'Text', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('post_text', old('post_text',$posts->post_text), array('class'=>'form-control')) !!}
+        {!! Form::textarea('post_text', old('post_text',$posts->post_text), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div>

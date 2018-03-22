@@ -19,13 +19,13 @@
 {!! Form::model($categories, array('class' => 'form-horizontal', 'id' => 'form-with-validation', 'method' => 'PATCH', 'route' => array(config('quickadmin.route').'.categories.update', $categories->id))) !!}
 
 <div class="form-group">
-    {!! Form::label('cat_name', 'Name', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('cat_name', 'Name*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('cat_name', old('cat_name',$categories->cat_name), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('cat_slug', 'Slug', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('cat_slug', 'Slug*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('cat_slug', old('cat_slug',$categories->cat_slug), array('class'=>'form-control')) !!}
         

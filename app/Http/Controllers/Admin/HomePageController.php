@@ -11,7 +11,7 @@ use App\Http\Requests\UpdateHomePageRequest;
 use Illuminate\Http\Request;
 
 use App\MainImage;
-
+use App\SEO;
 
 class HomePageController extends Controller {
 
@@ -24,7 +24,7 @@ class HomePageController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $homepage = HomePage::with("mainimage")->get();
+        $homepage = HomePage::with("mainimage")->with("seo")->get();
 
 		return view('admin.homepage.index', compact('homepage'));
 	}
@@ -37,9 +37,10 @@ class HomePageController extends Controller {
 	public function create()
 	{
 	    $mainimage = MainImage::pluck("main_text", "id")->prepend('Please select', 0);
+			$seo = SEO::pluck("meta_title", "id")->prepend('Please select', 0);
 
-	    
-	    return view('admin.homepage.create', compact("mainimage"));
+
+	    return view('admin.homepage.create', compact("mainimage", "seo"));
 	}
 
 	/**
@@ -49,7 +50,7 @@ class HomePageController extends Controller {
 	 */
 	public function store(CreateHomePageRequest $request)
 	{
-	    
+
 		HomePage::create($request->all());
 
 		return redirect()->route(config('quickadmin.route').'.homepage.index');
@@ -65,9 +66,10 @@ class HomePageController extends Controller {
 	{
 		$homepage = HomePage::find($id);
 	    $mainimage = MainImage::pluck("main_text", "id")->prepend('Please select', 0);
+			$seo = SEO::pluck("meta_title", "id")->prepend('Please select', 0);
 
-	    
-		return view('admin.homepage.edit', compact('homepage', "mainimage"));
+
+		return view('admin.homepage.edit', compact('homepage', "mainimage", "seo"));
 	}
 
 	/**
@@ -80,7 +82,7 @@ class HomePageController extends Controller {
 	{
 		$homepage = HomePage::findOrFail($id);
 
-        
+
 
 		$homepage->update($request->all());
 

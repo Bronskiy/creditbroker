@@ -27,15 +27,15 @@
 </div><div class="form-group">
     {!! Form::label('top_text', 'Top Text', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('top_text', old('top_text',$whereweoperate->top_text), array('class'=>'form-control')) !!}
+        {!! Form::textarea('top_text', old('top_text',$whereweoperate->top_text), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_1', 'Map Item 1', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('map_image_1', 'Map Image 1', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_1') !!}
-        {!! Form::hidden('map_item_1_w', 4096) !!}
-        {!! Form::hidden('map_item_1_h', 4096) !!}
+        {!! Form::file('map_image_1') !!}
+        {!! Form::hidden('map_image_1_w', 4096) !!}
+        {!! Form::hidden('map_image_1_h', 4096) !!}
         
     </div>
 </div><div class="form-group">
@@ -45,11 +45,11 @@
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_2', 'Map Item 2', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('map_image_2', 'Map Image 2', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_2') !!}
-        {!! Form::hidden('map_item_2_w', 4096) !!}
-        {!! Form::hidden('map_item_2_h', 4096) !!}
+        {!! Form::file('map_image_2') !!}
+        {!! Form::hidden('map_image_2_w', 4096) !!}
+        {!! Form::hidden('map_image_2_h', 4096) !!}
         
     </div>
 </div><div class="form-group">
@@ -59,115 +59,121 @@
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_3', 'Map Item 3', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('main_title', 'Main Title', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_3') !!}
-        {!! Form::hidden('map_item_3_w', 4096) !!}
-        {!! Form::hidden('map_item_3_h', 4096) !!}
+        {!! Form::textarea('main_title', old('main_title',$whereweoperate->main_title), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_text_3', 'Map Text 3', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_image_1', 'State Image 1', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('map_text_3', old('map_text_3',$whereweoperate->map_text_3), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::file('state_image_1') !!}
+        {!! Form::hidden('state_image_1_w', 4096) !!}
+        {!! Form::hidden('state_image_1_h', 4096) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_4', 'Map Item 4', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_text_1', 'State Text 1', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_4') !!}
-        {!! Form::hidden('map_item_4_w', 4096) !!}
-        {!! Form::hidden('map_item_4_h', 4096) !!}
+        {!! Form::textarea('state_text_1', old('state_text_1',$whereweoperate->state_text_1), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_text_4', 'Map Text 4', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_image_2', 'State Image 2', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('map_text_4', old('map_text_4',$whereweoperate->map_text_4), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::file('state_image_2') !!}
+        {!! Form::hidden('state_image_2_w', 4096) !!}
+        {!! Form::hidden('state_image_2_h', 4096) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_5', 'Map Item 5', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_text_2', 'State Text 2', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_5') !!}
-        {!! Form::hidden('map_item_5_w', 4096) !!}
-        {!! Form::hidden('map_item_5_h', 4096) !!}
+        {!! Form::textarea('state_text_2', old('state_text_2',$whereweoperate->state_text_2), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_text_5', 'Map Text 5', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_image_3', 'State Image 3', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('map_text_5', old('map_text_5',$whereweoperate->map_text_5), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::file('state_image_3') !!}
+        {!! Form::hidden('state_image_3_w', 4096) !!}
+        {!! Form::hidden('state_image_3_h', 4096) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_6', 'Map Item 6', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_text_3', 'State Text 3', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_6') !!}
-        {!! Form::hidden('map_item_6_w', 4096) !!}
-        {!! Form::hidden('map_item_6_h', 4096) !!}
+        {!! Form::textarea('state_text_3', old('state_text_3',$whereweoperate->state_text_3), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_text_6', 'Map Text 6', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_image_4', 'State Image 4', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('map_text_6', old('map_text_6',$whereweoperate->map_text_6), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::file('state_image_4') !!}
+        {!! Form::hidden('state_image_4_w', 4096) !!}
+        {!! Form::hidden('state_image_4_h', 4096) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_7', 'Map Item 7', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_text_4', 'State Text 4', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_7') !!}
-        {!! Form::hidden('map_item_7_w', 4096) !!}
-        {!! Form::hidden('map_item_7_h', 4096) !!}
+        {!! Form::textarea('state_text_4', old('state_text_4',$whereweoperate->state_text_4), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_text_7', 'Map Text 7', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_image_5', 'State Image 5', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('map_text_7', old('map_text_7',$whereweoperate->map_text_7), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::file('state_image_5') !!}
+        {!! Form::hidden('state_image_5_w', 4096) !!}
+        {!! Form::hidden('state_image_5_h', 4096) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_8', 'Map Item 8', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_text_5', 'State Text 5', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_8') !!}
-        {!! Form::hidden('map_item_8_w', 4096) !!}
-        {!! Form::hidden('map_item_8_h', 4096) !!}
+        {!! Form::textarea('state_text_5', old('state_text_5',$whereweoperate->state_text_5), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_text_8', 'Map Text 8', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_image_6', 'State Image 6', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('map_text_8', old('map_text_8',$whereweoperate->map_text_8), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::file('state_image_6') !!}
+        {!! Form::hidden('state_image_6_w', 4096) !!}
+        {!! Form::hidden('state_image_6_h', 4096) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_9', 'Map Item 9', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_text_6', 'State Text 6', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_9') !!}
-        {!! Form::hidden('map_item_9_w', 4096) !!}
-        {!! Form::hidden('map_item_9_h', 4096) !!}
+        {!! Form::textarea('state_text_6', old('state_text_6',$whereweoperate->state_text_6), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_text_9', 'Map Text 9', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_image_7', 'State Image 7', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('map_text_9', old('map_text_9',$whereweoperate->map_text_9), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::file('state_image_7') !!}
+        {!! Form::hidden('state_image_7_w', 4096) !!}
+        {!! Form::hidden('state_image_7_h', 4096) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_item_10', 'Map Item 10', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_text_7', 'State Text 7', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('map_item_10') !!}
-        {!! Form::hidden('map_item_10_w', 4096) !!}
-        {!! Form::hidden('map_item_10_h', 4096) !!}
+        {!! Form::textarea('state_text_7', old('state_text_7',$whereweoperate->state_text_7), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('map_text_10', 'Map Text 10', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('state_image_8', 'State Image 8', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('map_text_10', old('map_text_10',$whereweoperate->map_text_10), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::file('state_image_8') !!}
+        {!! Form::hidden('state_image_8_w', 4096) !!}
+        {!! Form::hidden('state_image_8_h', 4096) !!}
+        
+    </div>
+</div><div class="form-group">
+    {!! Form::label('state_text_8', 'State Text 8', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::textarea('state_text_8', old('state_text_8',$whereweoperate->state_text_8), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">

@@ -19,6 +19,7 @@
                         <th>Title</th>
 <th>Slug</th>
 <th>Category</th>
+<th>Date</th>
 
                         <th>&nbsp;</th>
                     </tr>
@@ -33,6 +34,7 @@
                             <td>{{ $row->post_title }}</td>
 <td>{{ $row->post_slug }}</td>
 <td>{{ isset($row->categories->cat_name) ? $row->categories->cat_name : '' }}</td>
+<td>{{ $row->post_date }}</td>
 
                             <td>
                                 {!! link_to_route(config('quickadmin.route').'.posts.edit', trans('quickadmin::templates.templates-view_index-edit'), array($row->id), array('class' => 'btn btn-xs btn-info')) !!}

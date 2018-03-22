@@ -16,9 +16,9 @@ return [
      * Quickadmin settings
      */
     // Default route
-    'route'              => 'admin',
+    'route'              => 'clspl2016',
     // Default home route
-    'homeRoute'          => 'admin',
+    'homeRoute'          => 'clspl2016',
 
     //Default home action
     // 'homeAction' => '\App\Http\Controllers\MyOwnController@index',

@@ -25,15 +25,15 @@
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('top_text', 'Top Text', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('top_text', 'Top Text                                                           StylesFormatFontSize', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::textarea('top_text', old('top_text',$getintouch->top_text), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('contact_map', 'Map', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('map', 'Map', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('contact_map', old('contact_map',$getintouch->contact_map), array('class'=>'form-control')) !!}
+        {!! Form::text('map', old('map',$getintouch->map), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">

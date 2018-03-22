@@ -19,19 +19,19 @@
 {!! Form::open(array('route' => config('quickadmin.route').'.mainmenu.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 
 <div class="form-group">
-    {!! Form::label('menu_title', 'Menu Title', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('menu_title', 'Menu Title*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('menu_title', old('menu_title'), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('menu_link', 'Menu Link', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('menu_link', 'Menu Link*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('menu_link', old('menu_link'), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('menu_order', 'Menu Order', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('menu_order', 'Menu Order*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('menu_order', old('menu_order'), array('class'=>'form-control')) !!}
         

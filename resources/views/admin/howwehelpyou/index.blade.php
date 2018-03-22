@@ -18,11 +18,12 @@
                         </th>
                         <th>Top Image</th>
 <th>Side Image Desktop</th>
-<th>1 Item Image</th>
-<th>2 Item Image</th>
-<th>3 Item Image</th>
-<th>4 Item Image</th>
-<th>5 Item Image</th>
+<th>Item Image 1</th>
+<th>Item Image 2</th>
+<th>Item Image 3</th>
+<th>Item Image 4</th>
+<th>Item Image 5</th>
+<th>SEO</th>
 
                         <th>&nbsp;</th>
                     </tr>
@@ -34,13 +35,14 @@
                             <td>
                                 {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                             </td>
-                            <td>{{ isset($row->mainimage->main_text) ? $row->mainimage->main_text : '' }}</td>
+                            <td>{{ isset($row->mainimage->link_title) ? $row->mainimage->link_title : '' }}</td>
 <td>@if($row->side_image_desktop != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->side_image_desktop }}">@endif</td>
 <td>@if($row->item_image_1 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->item_image_1 }}">@endif</td>
 <td>@if($row->item_image_2 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->item_image_2 }}">@endif</td>
 <td>@if($row->item_image_3 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->item_image_3 }}">@endif</td>
 <td>@if($row->item_image_4 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->item_image_4 }}">@endif</td>
 <td>@if($row->item_image_5 != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->item_image_5 }}">@endif</td>
+<td>{{ isset($row->seo->meta_title) ? $row->seo->meta_title : '' }}</td>
 
                             <td>
                                 {!! link_to_route(config('quickadmin.route').'.howwehelpyou.edit', trans('quickadmin::templates.templates-view_index-edit'), array($row->id), array('class' => 'btn btn-xs btn-info')) !!}

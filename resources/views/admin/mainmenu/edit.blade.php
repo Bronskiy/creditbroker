@@ -19,19 +19,19 @@
 {!! Form::model($mainmenu, array('class' => 'form-horizontal', 'id' => 'form-with-validation', 'method' => 'PATCH', 'route' => array(config('quickadmin.route').'.mainmenu.update', $mainmenu->id))) !!}
 
 <div class="form-group">
-    {!! Form::label('menu_title', 'Menu Title', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('menu_title', 'Menu Title*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('menu_title', old('menu_title',$mainmenu->menu_title), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('menu_link', 'Menu Link', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('menu_link', 'Menu Link*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('menu_link', old('menu_link',$mainmenu->menu_link), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('menu_order', 'Menu Order', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('menu_order', 'Menu Order*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('menu_order', old('menu_order',$mainmenu->menu_order), array('class'=>'form-control')) !!}
         
